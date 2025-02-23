@@ -1,4 +1,5 @@
 
+import { Pencil } from "lucide-react";
 import { useState } from "react";
 
 interface SummaryCardProps {
@@ -30,8 +31,9 @@ const SummaryCard = ({ id, date, time, backgroundColor }: SummaryCardProps) => {
           )}
           <button
             onClick={() => setEditName(true)}
-            className="text-sm text-gray-500 hover:text-gray-700"
+            className="flex items-center gap-1 text-sm text-gray-500 hover:text-gray-700"
           >
+            <Pencil className="w-3 h-3" />
             Edit name
           </button>
         </div>
@@ -71,4 +73,3 @@ const SummaryCard = ({ id, date, time, backgroundColor }: SummaryCardProps) => {
 };
 
 export default SummaryCard;
-
